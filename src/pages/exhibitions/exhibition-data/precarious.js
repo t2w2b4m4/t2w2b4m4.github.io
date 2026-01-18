@@ -19,12 +19,12 @@ const precarious = {
       description: '', // "Sterling silver Ganesha statue sitting on the rocks, on top of Hemingway's <i>A Moveable Feast</i>",
       date: '2017-12-01',
     },
-    {
-      fileName: 'precarious2.jpg',
-      name: 'precarious #2',
-      description: '', // 'Tungsten carbide ring on the edge of a tile',
-      date: '2021-01-11',
-    },
+    // {
+    //   fileName: 'precarious2.jpg',
+    //   name: 'precarious #2',
+    //   description: '', // 'Tungsten carbide ring on the edge of a tile',
+    //   date: '2021-01-11',
+    // },
   ],
 };
 

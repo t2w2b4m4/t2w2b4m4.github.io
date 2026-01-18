@@ -72,6 +72,7 @@ function ExhibitionThumbnail({ data }) {
           </tbody>
         </table>
         <div className="exhibition-description">
+          <br />
           {data.meta.about}
           {data.meta.numberOfImages ? ` (${data.meta.numberOfImages} Images)` : ''}
         </div>

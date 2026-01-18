@@ -33,7 +33,7 @@ const vol2 = {
     },
     {
       fileName: '018-blasphemy.jpeg',
-      displayName: 'Blasphemy [Pedestal]',
+      displayName: 'Blasphemy',
       description: '',
     },
     {
@@ -46,11 +46,11 @@ const vol2 = {
     //   displayName: 'The Most Magical Place on Earth',
     //   description: 'I had no idea I was going to the most magical place on earth until the day before. Never thought about going, but there I was.',
     // },
-    {
-      fileName: '055-wish-no-1.jpeg',
-      displayName: 'Wish #1',
-      description: '',
-    },
+    // {
+    //   fileName: '055-wish-no-1.jpeg',
+    //   displayName: 'Wish #1',
+    //   description: '',
+    // },
     {
       fileName: '080-a-song-for-you-1.jpg',
       displayName: 'A Song for You, Pt.1',

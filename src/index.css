@@ -95,5 +95,10 @@ hr {
 
 .bottom {
   position: absolute;
-  bottom: 24px;
+  bottom: 36px;
+}
+
+.bottom-12 {
+  position: absolute;
+  bottom: 0px;
 }

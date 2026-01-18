@@ -41,6 +41,11 @@ function About() {
       <div className="bottom">
         <Contact />
       </div>
+      <div>
+        <footer className="bottom-12">
+          <p>&copy; 2026. All rights reserved.</p>
+        </footer>
+      </div>
     </div>
   );
 }

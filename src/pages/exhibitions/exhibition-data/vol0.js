@@ -4,13 +4,15 @@ const vol0 = {
   meta: {
     name: 'vol-0',
     displayName: '圖文並茂 Vol. 0',
-    about: '',
+    about: 'A little collection of selected cherishable snippets of my teenage and young adult life.',
+    detailedDescription: 'A little collection of selected cherishable snippets of my teenage and young adult life. I hope they might spark a memory, maybe even light a creative fire in you. (Signed and stamped copies are no longer available.)',
     numberOfImages: 84,
-    progressStatus: ProgressStatus.RELEASED,
+    progressStatus: ProgressStatus.PUBLISHED,
     // releaseStatus: 'Shipping',
     releaseDate: 'Jan. 23, 2023',
     imageFolderName: 'twbm-vol-1-2',
-    link: 'https://mixam.com/print-on-demand/658db1e95dddc94c958b7523',
+    link: 'mailto: twbm.site@gmail.com',
+    // link: 'https://mixam.com/print-on-demand/658db1e95dddc94c958b7523', // I'm flatted that you're curious enough to dig into here to find the link haha. 
   },
   showings: [
     {

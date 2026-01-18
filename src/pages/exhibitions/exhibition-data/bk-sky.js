@@ -18,30 +18,30 @@ const bkSky = {
       description: '',
       date: '12-22-2022',
     },
-    {
-      fileName: 'bk-sky-antenna.jpg',
-      displayName: 'Untitled',
-      description: '',
-      date: '12-22-2022',
-    },
-    {
-      fileName: 'smog.jpg',
-      displayName: 'Smog',
-      description: '',
-      date: '12-22-2022',
-    },
-    {
-      fileName: 'untitled.jpg',
-      displayName: 'Untitled',
-      description: '',
-      date: '12-22-2022',
-    },
-    {
-      fileName: 'finale.jpg',
-      displayName: 'Finale',
-      description: '',
-      date: '12-22-2022',
-    },
+    // {
+    //   fileName: 'bk-sky-antenna.jpg',
+    //   displayName: 'Untitled',
+    //   description: '',
+    //   date: '12-22-2022',
+    // },
+    // {
+    //   fileName: 'smog.jpg',
+    //   displayName: 'Canadian Wildfire',
+    //   description: '',
+    //   date: '12-22-2022',
+    // },
+    // {
+    //   fileName: 'untitled.jpg',
+    //   displayName: 'Untitled',
+    //   description: '',
+    //   date: '12-22-2022',
+    // },
+    // {
+    //   fileName: 'finale.jpg',
+    //   displayName: 'Finale',
+    //   description: '',
+    //   date: '12-22-2022',
+    // },
   ],
 };
 

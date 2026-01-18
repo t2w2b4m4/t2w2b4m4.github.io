@@ -3,5 +3,6 @@ export const ProgressStatus = {
   IN_PROGRESS: 'WIP',
   COMPLETED: 'Completed',
   RELEASED: 'Released',
+  PUBLISHED: 'Published',
   ARCHIVED: 'Archived',
 };

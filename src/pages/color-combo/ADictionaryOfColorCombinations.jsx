@@ -31,9 +31,15 @@ function ADictionaryOfColorCombinations() {
           Object.keys(COLOR_COMBINATIONS).map((comboNumber) => (
             <li key={`combination_${comboNumber}`} style={{ margin: '2.5px 0' }}>
               {COLOR_COMBINATIONS[comboNumber].map((color) => (
-                <span style={{ background: color.hex }} title={`${color.name}: ${color.hex}`}>
-                  &nbsp;&nbsp;&nbsp;
-                </span>
+                <div>
+                  <span style={{ background: color.hex }} title={`${color.name}: ${color.hex}`}>
+                    &nbsp;&nbsp;&nbsp;
+                  </span>
+                  <span>
+                    &nbsp;
+                    {color.name}
+                  </span>
+                </div>
               ))}
             </li>
           ))
