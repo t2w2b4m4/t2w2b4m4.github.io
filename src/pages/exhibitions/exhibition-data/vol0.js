@@ -4,8 +4,8 @@ const vol0 = {
   meta: {
     name: 'vol-0',
     displayName: '圖文並茂 Vol. 0',
-    about: 'A little collection of selected cherishable snippets of my teenage and young adult life.',
-    detailedDescription: 'A little collection of selected cherishable snippets of my teenage and young adult life. I hope they might spark a memory, maybe even light a creative fire in you. (Signed and stamped copies are no longer available.)',
+    about: 'A little collection of selected cherishable snippets of my past life.',
+    detailedDescription: 'A little collection of selected cherishable snippets of mostly my teenage and young adult life. I hope they might spark a memory, maybe even light a creative fire in you. (Signed and stamped copies are no longer available.)',
     numberOfImages: 84,
     progressStatus: ProgressStatus.PUBLISHED,
     // releaseStatus: 'Shipping',
