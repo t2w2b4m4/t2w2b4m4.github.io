@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.87c9a1a6.css",
-    "main.js": "/static/js/main.906f28e5.js",
+    "main.js": "/static/js/main.4bac99c1.js",
     "static/media/087-rooms-by-the-sea.jpg": "/static/media/087-rooms-by-the-sea.bc04b45860f8a1d8c023.jpg",
     "static/media/080-a-song-for-you-1.jpg": "/static/media/080-a-song-for-you-1.dca609543c90e561629b.jpg",
     "static/media/finale.jpg": "/static/media/finale.e0f86de6c069852a1413.jpg",
@@ -47,6 +47,6 @@
   },
   "entrypoints": [
     "static/css/main.87c9a1a6.css",
-    "static/js/main.906f28e5.js"
+    "static/js/main.4bac99c1.js"
   ]
 }
