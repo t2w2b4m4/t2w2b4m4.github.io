@@ -34,7 +34,7 @@ const vol3 = {
     },
     {
       fileName: 'people-and-light-house.jpg',
-      displayName: 'People and Light House',
+      displayName: 'People and Lighthouse',
       description: '',
       date: '09-03-2024',
     },
