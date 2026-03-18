@@ -61,16 +61,15 @@ const grnxgArchive = {
       description: '',
       date: '',
     },
-    // FIXME
-    // {
-    //   fileName: 'herder.jpg',
-    //   displayName: 'Herder',
-    //   description: '',
-    //   date: '',
-    // },
+    {
+      fileName: 'herder.jpg',
+      displayName: 'Herder',
+      description: '',
+      date: '',
+    },
     {
       fileName: 'chrismas-2025.jpg',
-      displayName: '',
+      displayName: 'Christmas 2025',
       description: '',
       date: '',
     },
@@ -82,20 +81,19 @@ const grnxgArchive = {
     },
     {
       fileName: 'winter-in-calvert-vaux-park.jpg',
-      displayName: '',
+      displayName: 'Winter in Calvert Vaux Park',
       description: '',
       date: '',
     },
-    // FIXME
-    // {
-    //   fileName: 'winter-in-calvert-vaux-park-2.jpg',
-    //   displayName: '',
-    //   description: '',
-    //   date: '',
-    // },
+    {
+      fileName: 'winter-in-calvert-vaux-park-2.jpg',
+      displayName: 'Winter in Calvert Vaux Park',
+      description: '',
+      date: '',
+    },
     {
       fileName: 'color-study.jpg',
-      displayName: '',
+      displayName: 'Color Study',
       description: '',
       date: '',
     },
@@ -123,13 +121,12 @@ const grnxgArchive = {
       description: '',
       date: '',
     },
-    // TODO: need to fix the weird distortion
-    // {
-    //   fileName: 'wind-surfers.jpg',
-    //   displayName: '',
-    //   description: '',
-    //   date: '',
-    // },
+    {
+      fileName: 'wind-surfers.jpg',
+      displayName: 'Wind Surfers',
+      description: '',
+      date: '',
+    },
     {
       fileName: 'early-morning-in-late-october.jpg',
       displayName: '',
@@ -148,7 +145,6 @@ const grnxgArchive = {
       description: '',
       date: '',
     },
-    // FIXME
     {
       fileName: 'red-hook-water.jpg',
       displayName: '',
@@ -169,13 +165,13 @@ const grnxgArchive = {
     },
     {
       fileName: 'in-between-winter-and-spring.jpg',
-      displayName: '',
+      displayName: 'In Between Winter and Spring',
       description: '',
       date: '',
     },
     {
       fileName: 'in-between-winter-and-spring-2.jpg',
-      displayName: '',
+      displayName: 'In Between Winter and Spring',
       description: '',
       date: '',
     },
@@ -187,13 +183,13 @@ const grnxgArchive = {
     },
     {
       fileName: 'study-of-line.jpg',
-      displayName: '',
+      displayName: 'Line Study',
       description: '',
       date: '',
     },
     {
       fileName: 'study-of-line-2.jpg',
-      displayName: '',
+      displayName: 'Line Study',
       description: '',
       date: '',
     },
@@ -203,16 +199,15 @@ const grnxgArchive = {
       description: '',
       date: '',
     },
-    // FIXME
-    // {
-    //   fileName: 'painting-study-1.jpg',
-    //   displayName: '',
-    //   description: '',
-    //   date: '',
-    // },
+    {
+      fileName: 'painting-study-1.jpg',
+      displayName: 'Photo Painting Study',
+      description: '',
+      date: '',
+    },
     {
       fileName: 'painting-study-2.jpg',
-      displayName: '',
+      displayName: 'Photo Painting Study',
       description: '',
       date: '',
     },
@@ -230,7 +225,7 @@ const grnxgArchive = {
     },
     {
       fileName: 'afternoon-stroll-with-company.jpg',
-      displayName: '',
+      displayName: 'Afternoon Stroll with Company',
       description: '',
       date: '',
     },
@@ -242,14 +237,13 @@ const grnxgArchive = {
     },
     {
       fileName: 'foot-prints-in-the-sand.jpg',
-      displayName: '',
+      displayName: 'Footprints in the Sand',
       description: '',
       date: '',
     },
-    // FIXME: 
     {
       fileName: 'winter-stock.jpg',
-      displayName: '',
+      displayName: 'Winter Stock',
       description: '',
       date: '',
     },

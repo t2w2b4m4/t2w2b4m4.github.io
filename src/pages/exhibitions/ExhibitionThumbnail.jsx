@@ -5,6 +5,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import getImagePathByFileName from './getImagePathByFileName';
 import '../../styles/ExhibitionThumbnail.css';
+import '../../styles/Exhibition.css';
 import '../../styles/fujifilm-square.css';
 
 /**
@@ -27,16 +28,16 @@ function ExhibitionThumbnail({ data }) {
   return (
     <div className="exhibition-thumbnail">
       <div className="fujifilm-body">
-        {/* <div className="exhibition-thumbnail-image-wrapper"> */}
-        <img
-          className="fujifilm-photo"
-          src={require(`${getImagePathByFileName(data, data.showings[0].fileName)}`)}
-          alt={data.showings[0].name}
-        />
-        {/* </div> */}
+        <div className="image-wrapper">
+          <img
+            className="fujifilm-photo"
+            src={require(`${getImagePathByFileName(data, data.showings[0].fileName)}`)}
+            alt={data.showings[0].name}
+          />
+        </div>
         <div className="fujifilm-description">
           {/* <hr /> */}
-          <span className="exhibition-name">{data.meta.displayName}</span>
+          <span className="exhibition-name image-title">{data.meta.displayName}</span>
         </div>
       </div>
       <div className="exhibition-info image-info">
