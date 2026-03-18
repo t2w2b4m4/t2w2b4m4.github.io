@@ -9,6 +9,7 @@ import geometric from './geometric';
 import grnxgArchive from './ig-grxng-archive';
 
 export default [
+  grnxgArchive,
   vol0,
   vol3,
   vol1,
@@ -16,6 +17,5 @@ export default [
   bkSky,
   precarious,
   geometric,
-  grnxgArchive,
   // pedestal,
 ];
