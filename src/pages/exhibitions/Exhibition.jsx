@@ -135,11 +135,13 @@ function Exhibition({ data }) {
             onClick={handleImageClick}
             id={IMAGE_PARENT_DIV_HTML_ELEMENT_ID}
           >
-            <img
-              className="focused-image fujifilm-photo"
-              src={require(`${getImagePathByFileName(data, data.showings[indexOfFocusedImage].fileName)}`)}
-              alt={data.showings[indexOfFocusedImage].displayName}
-            />
+            <div className="image-wrapper">
+              <img
+                className="focused-image fujifilm-photo"
+                src={require(`${getImagePathByFileName(data, data.showings[indexOfFocusedImage].fileName)}`)}
+                alt={data.showings[indexOfFocusedImage].displayName}
+              />
+            </div>
             {/* <span className="focused-image-wrapper photo">
             </span> */}
             <div

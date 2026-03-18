@@ -7,12 +7,29 @@
   background-color: #f7f5f5;
   box-shadow: 6px 3px 6px #888888;
   z-index: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7.8125mm 5mm 3mm 5mm;
 }
 
 .fujifilm-photo {
+  max-width: calc(61mm - 2px);
+  max-height: calc(61mm - 2px);
+  object-fit: contain;
+  border: 1px solid rgba(203, 200, 200, 0.2);
+  display: block;
+  /* margin: 7.8125mm 5mm 3mm 5mm; */
+}
+
+.image-wrapper {
   width: 61mm;
-  max-height: 61mm;
-  margin: 7.8125mm 5mm 3mm 5mm;
+  height: 61mm;
+  background-color: rgb(5, 5, 5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .fujifilm-description {

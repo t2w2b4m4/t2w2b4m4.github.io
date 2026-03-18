@@ -10,7 +10,7 @@
 }
 
 .fujifilm-photo {
-    width: 46mm;
+    max-width: 46mm;
     max-height: 61mm;
     margin: 7.8125mm 5mm 3mm 5mm;
 }
