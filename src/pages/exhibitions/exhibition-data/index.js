@@ -6,6 +6,7 @@ import bkSky from './bk-sky';
 // import pedestal from './pedestal';
 import precarious from './precarious';
 import geometric from './geometric';
+import grnxgArchive from './ig-grxng-archive';
 
 export default [
   vol0,
@@ -15,5 +16,6 @@ export default [
   bkSky,
   precarious,
   geometric,
+  grnxgArchive,
   // pedestal,
 ];
