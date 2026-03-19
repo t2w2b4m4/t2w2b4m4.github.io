@@ -3,11 +3,11 @@ import { ProgressStatus } from '../constants';
 const onDisplay = {
   meta: {
     name: 'onDisplay',
-    displayName: 'Currenly On Display',
+    displayName: 'View of Angel Island from the Golden Gate Bridge',
     about: '',
     detailedDescription: '',
     numberOfImages: '',
-    progressStatus: ProgressStatus.RELEASED,
+    progressStatus: ProgressStatus.ON_DISPLAY,
     releaseDate: 'Spring 2026',
     link: '',
     linkDescription: '',
