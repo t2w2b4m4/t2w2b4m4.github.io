@@ -8,10 +8,10 @@ const vol0 = {
     detailedDescription: 'A little collection of selected cherishable snippets of mostly my teenage and young adult life. I hope they might spark a memory, maybe even light a creative fire in you. (Signed and stamped copies are no longer available.)',
     numberOfImages: 84,
     progressStatus: ProgressStatus.PUBLISHED,
-    // releaseStatus: 'Shipping',
     releaseDate: 'Jan. 23, 2023',
     imageFolderName: 'twbm-vol-1-2',
     link: 'mailto: twbm.site@gmail.com',
+    linkDescription: 'Email me for purchase info 💌',
     // link: 'https://mixam.com/print-on-demand/658db1e95dddc94c958b7523', // I'm flatted that you're curious enough to dig into here to find the link haha. 
   },
   showings: [

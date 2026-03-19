@@ -6,13 +6,16 @@
 /* eslint-disable global-require */
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable no-undef */
-import React, { useState, useRef, useEffect } from 'react';
+import React, {
+  useState, useRef, useEffect, useCallback,
+} from 'react';
 import PropTypes from 'prop-types';
 import { Link, useHistory } from 'react-router-dom';
 import getImagePathByFileName from './getImagePathByFileName';
 import { WEB_TITLE } from '../../components/appStrings';
 import '../../styles/Exhibition.css';
 import '../../styles/fujifilm-square.css';
+import '../../styles/imageModal.css';
 
 const SCROLL_WIDTH = 100;
 const ON_HOVER_MOUSE_POINTER_LEFT_CLASS = 'on-hover-mouse-pointer-left';
@@ -43,6 +46,10 @@ function Exhibition({ data }) {
   const history = useHistory();
   const [indexOfFocusedImage, setIndexOfFocusedImage] = useState(0);
   const [mouseHoverPointerClass, setMouseHoverPointerClass] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   const handleImageThumbnailClick = (indexOfImage) => () => {
     setIndexOfFocusedImage(indexOfImage);
@@ -90,9 +97,45 @@ function Exhibition({ data }) {
     exhibitionSlideShowRef.current.scrollTop += SCROLL_WIDTH;
   };
 
+  const goToImage = useCallback((newIndex) => {
+    const idx = (numOfImages + newIndex) % numOfImages;
+    setIndexOfFocusedImage(idx);
+    history.push(`#${idx}`);
+
+    // Show current image in slide show
+    // eslint-disable-next-line no-undef
+    document.getElementById(idx).scrollIntoView(); // scrolls list of thumbnails
+    document.getElementById(IMAGE_PARENT_DIV_HTML_ELEMENT_ID).scrollIntoView(); // keeps picture in view
+  }, [history, numOfImages]);
+
+  const goNextInModal = useCallback(() => goToImage(indexOfFocusedImage + 1), [goToImage, indexOfFocusedImage]);
+  const goPrevInModal = useCallback(() => goToImage(indexOfFocusedImage - 1), [goToImage, indexOfFocusedImage]);
+
   const handleKeyDownCapture = (e) => {
     if (e.key === ' ') { e.target.click(); }
   };
+
+  useEffect(() => {
+    if (!isModalOpen) return undefined;
+
+    const handleModalKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
+        return;
+      }
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        goNextInModal();
+      }
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        goPrevInModal();
+      }
+    };
+
+    window.addEventListener('keydown', handleModalKeyDown);
+    return () => window.removeEventListener('keydown', handleModalKeyDown);
+  }, [isModalOpen, goNextInModal, goPrevInModal]);
 
   useEffect(() => {
     // eslint-disable-next-line no-undef
@@ -118,9 +161,15 @@ function Exhibition({ data }) {
         {
           data.meta.link ? (
             <div>
-              <u>Email me for purchase info</u>
-              {': '}
-              <a href={data.meta.link} target="_blank" rel="noreferrer">🔗</a>
+              <a href={data.meta.link} target="_blank" rel="noreferrer">
+                {
+                  data.meta.linkDescription ? (
+                    <u>
+                      {data.meta.linkDescription}
+                    </u>
+                  ) : ''
+                }
+              </a>
             </div>
           ) : ''
         }
@@ -198,12 +247,54 @@ function Exhibition({ data }) {
             >
               <span>▲</span>
             </div>
+            {
+              data.meta.specialRendering ? (
+                <div
+                  className="image-zoom-button"
+                  onClick={(e) => { e.stopPropagation(); openModal(); }}
+                  aria-label="Open image modal"
+                >
+                  ⊕
+                </div>
+              ) : ''
+            }
+
           </div>
         </div>
         <div className="image-info">
           <div className="image-description" dangerouslySetInnerHTML={{ __html: data.showings[indexOfFocusedImage].description }} />
+          {
+            data.showings[indexOfFocusedImage].date ? (
+              <div>
+                ____
+                <br />
+                <br />
+                <div>
+                  {data.showings[indexOfFocusedImage].date}
+                </div>
+              </div>
+            ) : ''
+
+          }
         </div>
       </div>
+
+      {isModalOpen && (
+        <div
+          className="image-modal"
+          onClick={(e) => { if (e.target === e.currentTarget) closeModal(); }}
+          role="dialog"
+          aria-modal="true"
+        >
+          <span className="image-modal-close" onClick={closeModal} aria-label="Close modal">&times;</span>
+          <img
+            className="image-modal-content"
+            src={require(`${getImagePathByFileName(data, data.showings[indexOfFocusedImage].fileName)}`)}
+            alt={data.showings[indexOfFocusedImage].displayName}
+          />
+          <div className="image-modal-caption">{data.showings[indexOfFocusedImage].displayName}</div>
+        </div>
+      )}
     </div>
   );
 }
