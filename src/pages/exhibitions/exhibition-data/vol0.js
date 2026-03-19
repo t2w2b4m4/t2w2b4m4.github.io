@@ -12,7 +12,7 @@ const vol0 = {
     imageFolderName: 'twbm-vol-1-2',
     link: 'mailto: twbm.site@gmail.com',
     linkDescription: 'Email me for purchase info 💌',
-    // link: 'https://mixam.com/print-on-demand/658db1e95dddc94c958b7523', // I'm flatted that you're curious enough to dig into here to find the link haha. 
+    // link: 'https://mixam.com/print-on-demand/658db1e95dddc94c958b7523', // I'm flatted that you're curious enough to dig into here to find the link haha.
   },
   showings: [
     {

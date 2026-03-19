@@ -204,8 +204,18 @@ function Exhibition({ data }) {
               {/* <div className="image-info">
                 <div className="image-description" dangerouslySetInnerHTML={{ __html: data.showings[indexOfFocusedImage].description }} />
               </div> */}
-
             </div>
+            {
+              data.meta.specialRendering ? (
+                <div
+                  className="image-zoom-button"
+                  onClick={(e) => { e.stopPropagation(); openModal(); }}
+                  aria-label="Open image modal"
+                >
+                  <img src="/mu-2.png" alt="+" width={18} height={18} style={{ verticalAlign: 'middle', marginRight: '4px' }} />
+                </div>
+              ) : ''
+            }
           </div>
           <div className="exhibition-slide-show-wrapper-vertical">
             <div
@@ -247,18 +257,6 @@ function Exhibition({ data }) {
             >
               <span>▲</span>
             </div>
-            {
-              data.meta.specialRendering ? (
-                <div
-                  className="image-zoom-button"
-                  onClick={(e) => { e.stopPropagation(); openModal(); }}
-                  aria-label="Open image modal"
-                >
-                  ⊕
-                </div>
-              ) : ''
-            }
-
           </div>
         </div>
         <div className="image-info">

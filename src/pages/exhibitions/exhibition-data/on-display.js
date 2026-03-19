@@ -8,7 +8,7 @@ const onDisplay = {
     detailedDescription: '',
     numberOfImages: '',
     progressStatus: ProgressStatus.RELEASED,
-    releaseDate: 'Today',
+    releaseDate: 'Spring 2026',
     link: '',
     linkDescription: '',
     imageFolderName: 'on-display',
