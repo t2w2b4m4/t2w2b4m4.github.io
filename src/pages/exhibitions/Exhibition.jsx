@@ -56,11 +56,10 @@ function Exhibition({ data }) {
   };
 
   const handleMouseMoveCaptureOnImage = (e) => {
-    const start = e.target.offsetLeft;
-    const end = start + e.target.clientWidth;
-    const middle = (start + end) / 2;
+    const rect = e.target.getBoundingClientRect();
+    const middle = rect.left + rect.width / 2;
 
-    if (middle > e.clientX) {
+    if (e.clientX < middle) {
       // left
       setMouseHoverPointerClass(ON_HOVER_MOUSE_POINTER_LEFT_CLASS);
     } else {
