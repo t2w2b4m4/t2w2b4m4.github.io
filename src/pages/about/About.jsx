@@ -38,9 +38,15 @@ function About() {
         </div>
         <br />
         <div className="image-info">
-          圖文並茂 (tú wén bìng mào) is a Chinese idiom describing the perfect harmony between text and visual elements, where both complement each other to elevate the overall impact. Ever since the seed of art grew in me, this term has frequently surfaced in my mind, like birds returning to rest on a familiar branch. Over time, it has matured from a simple phrase into one of my core artistic philosophy.
+          圖文並茂 (tú wén bìng mào) is a Chinese idiom describing the perfect harmony between text and visual elements, where both complement each other to elevate the overall impact. This is one of my core artistic philosophies.
+          {/* Ever since the seed of art grew in me, this term has frequently surfaced in my mind, like birds returning to rest on a familiar branch. Over time, it has matured from a simple phrase into one of my core artistic philosophy. */}
           <br />
-          To me, this concept transcends its literal definition. It is a piece of art itself. It does not strictly require the presence of both text and image. Think of it more like a poem that can conjure vivid imagery, or a movie poster that can capture an entire narrative in one striking image.
+          To me, this concept transcends its literal definition. It is a piece of art itself and it does not strictly require the presence of both text and image.
+          <br />
+          Think of it more like a poem that can conjure vivid imagery, or a movie poster that can capture an entire narrative in one striking image.
+          <br />
+          <br />
+          Hope you find inspirations.
         </div>
         
         <span>
