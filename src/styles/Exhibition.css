@@ -34,6 +34,19 @@
   padding-top: 8px;
   /* padding: 0 5mm; */
 }
+.image-position-counter {
+  /* fixed to the top right of the screen */
+  position: fixed;
+  top: 24px;
+  right: 24px;
+
+  padding: 3px;
+  font-size: 10px;
+  color: #555454;
+  /* background-color: #555454; */
+  
+  user-select: none;
+}
 
 /* 
 .focused-content-wrapper {

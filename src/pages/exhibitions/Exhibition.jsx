@@ -177,6 +177,7 @@ function Exhibition({ data }) {
       </div>
       <div className="exhibition-body">
         <div className="exhibition-image-wrapper not-selectable">
+          {/* film body */}
           <div
             className={`focused-content-wrapper fujifilm-body ${mouseHoverPointerClass}`}
             onMouseMove={handleMouseMoveCaptureOnImage}
@@ -216,7 +217,15 @@ function Exhibition({ data }) {
               ) : ''
             }
           </div>
+          {/* vertical slide show */}
           <div className="exhibition-slide-show-wrapper-vertical">
+            <div className="image-position-counter-wrapper">
+              <span className="image-position-counter">
+                {indexOfFocusedImage + 1}
+                /
+                {numOfImages}
+              </span>
+            </div>
             <div
               className="slide-show-directional pointer slide-show-left slide-show-up"
               onClick={handleSlideShowLeftClick}
@@ -257,6 +266,14 @@ function Exhibition({ data }) {
               <span>▲</span>
             </div>
           </div>
+          {/* image position counter */}
+          {/* <div className="image-position-counter-wrapper">
+            <span className="image-position-counter">
+              {indexOfFocusedImage + 1}
+              /
+              {numOfImages}
+            </span>
+          </div> */}
         </div>
         <div className="image-info">
           <div className="image-description" dangerouslySetInnerHTML={{ __html: data.showings[indexOfFocusedImage].description }} />
