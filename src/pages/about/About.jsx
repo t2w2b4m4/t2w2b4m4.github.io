@@ -25,15 +25,19 @@ function About() {
         <div
           className="focused-content-wrapper fujifilm-body"
         >
-          <img
-            className="focused-image fujifilm-photo"
-            src={require('./assets/000-twbm.jpg')}
-            alt="twbm"
-          />
+          <div className="image-wrapper">
+            <img
+              className="focused-image fujifilm-photo"
+              src={require('./assets/000-twbm.jpg')}
+              alt="twbm"
+            />
+          </div>
           <div
             className="focused-image-description fujifilm-description"
           >
-            twbm
+            <div className="image-title">
+              {/* twbm */}
+            </div>
           </div>
         </div>
         <br />

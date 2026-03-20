@@ -28,13 +28,55 @@ function Home() {
         <Link
           to={routes.tools.path}
         >
-          <span>⚙️</span>
+          <span style={
+            {
+              background: 'black',
+              border: '1px solid black',
+              width: '9px',
+              height: '9px',
+              display: 'inline-block',
+            }
+          }
+          >
+            {}
+          </span>
         </Link>
         {' '}
         <Link
           to={routes.colors.path}
         >
-          <span>⚙️</span>
+          {/* <span style={{ background: blue; width: 12px }}></span> */}
+          <span style={
+            {
+              background: 'red',
+              border: '1px solid red',
+              width: '9px',
+              height: '9px',
+              display: 'inline-block',
+            }
+          }
+          />
+          <span style={
+            {
+              background: 'yellow',
+              border: '1px solid yellow',
+              width: '9px',
+              height: '9px',
+              display: 'inline-block',
+            }
+          }
+          />
+          <span style={
+            {
+              background: 'blue',
+              border: '1px solid blue',
+              width: '9px',
+              height: '9px',
+              display: 'inline-block',
+            }
+          }
+          />
+          {/* <span>⚙️</span> */}
         </Link>
       </div>
     </div>

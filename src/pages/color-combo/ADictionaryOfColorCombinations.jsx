@@ -25,7 +25,11 @@ function ADictionaryOfColorCombinations() {
   });
   return (
     <div className="a-dictionary-of-color-combinations">
-      <h1>A Dictionary of Color Combinations</h1>
+      <h1>
+        <a href="https://sanzo-wada.dmbk.io/" target="_blank" rel="noreferrer">
+          A Dictionary of Color Combinations
+        </a>
+      </h1>
       <ol>
         {
           Object.keys(COLOR_COMBINATIONS).map((comboNumber) => (
