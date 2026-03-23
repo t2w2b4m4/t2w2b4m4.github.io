@@ -1089,13 +1089,19 @@ const showings = [
   },
   {
     fileName: 'city-within-2.jpg',
-    displayName: '',
+    displayName: 'City Within',
     description: '',
     date: '',
   },
   {
     fileName: 'city-within.jpg',
-    displayName: '',
+    displayName: 'City Within',
+    description: '',
+    date: '',
+  },
+  {
+    fileName: 'shape-study-0008.jpg',
+    displayName: 'City Within',
     description: '',
     date: '',
   },
@@ -1103,13 +1109,13 @@ const showings = [
     fileName: 'claw-machines.jpg',
     displayName: '',
     description: '',
-    date: '',
+    date: 'February 2024',
   },
   {
     fileName: 'cny-2024.jpg',
-    displayName: '',
+    displayName: 'CNY 2024',
     description: '',
-    date: '',
+    date: 'February 2024',
   },
   {
     fileName: 'coastal.jpg',
@@ -1119,9 +1125,9 @@ const showings = [
   },
   {
     fileName: 'color-study.jpg',
-    displayName: '',
+    displayName: 'Color Study',
     description: '',
-    date: '',
+    date: 'March 2024',
   },
   {
     fileName: 'composition-study-0002.jpg',
@@ -1133,7 +1139,7 @@ const showings = [
     fileName: 'composition-study-2.jpg',
     displayName: '',
     description: '',
-    date: '',
+    date: 'March 2024',
   },
   {
     fileName: 'composition-study-3.jpg',
@@ -2135,12 +2141,6 @@ const showings = [
   {
     fileName: 'shape-study-0007.jpg',
     displayName: 'Shape and Composition Study',
-    description: '',
-    date: '',
-  },
-  {
-    fileName: 'shape-study-0008.jpg',
-    displayName: 'City Within',
     description: '',
     date: '',
   },
