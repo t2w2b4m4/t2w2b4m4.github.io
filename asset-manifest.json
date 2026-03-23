@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.911466fb.css",
-    "main.js": "/static/js/main.0350ecf0.js",
+    "main.js": "/static/js/main.7e79c5cd.js",
     "static/media/087-rooms-by-the-sea.jpg": "/static/media/087-rooms-by-the-sea.bc04b45860f8a1d8c023.jpg",
     "static/media/080-a-song-for-you-1.jpg": "/static/media/080-a-song-for-you-1.dca609543c90e561629b.jpg",
     "static/media/finale.jpg": "/static/media/finale.e0f86de6c069852a1413.jpg",
@@ -137,6 +137,7 @@
     "static/media/figures.jpg": "/static/media/figures.f54f9a853b52cf619234.jpg",
     "static/media/shape-study-0006.jpg": "/static/media/shape-study-0006.ca5ddb1a00f6674a2649.jpg",
     "static/media/glitch-4.jpg": "/static/media/glitch-4.9f3be369420ec6fd1307.jpg",
+    "static/media/photo-painting-study-03212026.jpg": "/static/media/photo-painting-study-03212026.5bf5a6cc191fe616f85b.jpg",
     "static/media/shape-study-0007.jpg": "/static/media/shape-study-0007.074bf25e2015f7054c56.jpg",
     "static/media/loner.jpg": "/static/media/loner.73c4b19ae1d6a867c9ab.jpg",
     "static/media/revealed.jpg": "/static/media/revealed.f503ab3083370c9b8375.jpg",
@@ -373,6 +374,6 @@
   },
   "entrypoints": [
     "static/css/main.911466fb.css",
-    "static/js/main.0350ecf0.js"
+    "static/js/main.7e79c5cd.js"
   ]
 }
