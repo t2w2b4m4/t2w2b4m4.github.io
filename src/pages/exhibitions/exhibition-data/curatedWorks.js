@@ -741,7 +741,7 @@ const showings = [
   },
   {
     fileName: 'persistence-of-memory.jpg',
-    displayName: 'Persistence of Memory',
+    displayName: 'The Persistence of Memory',
     description: '',
     date: '',
   },
