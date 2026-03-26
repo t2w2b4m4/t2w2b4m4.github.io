@@ -109,6 +109,14 @@ function Exhibition({ data }) {
 
   const goNextInModal = useCallback(() => goToImage(indexOfFocusedImage + 1), [goToImage, indexOfFocusedImage]);
   const goPrevInModal = useCallback(() => goToImage(indexOfFocusedImage - 1), [goToImage, indexOfFocusedImage]);
+  const handleModalImageClick = (e) => {
+    e.stopPropagation();
+    if (mouseHoverPointerClass === ON_HOVER_MOUSE_POINTER_LEFT_CLASS) {
+      goPrevInModal();
+    } else {
+      goNextInModal();
+    }
+  };
 
   const handleKeyDownCapture = (e) => {
     if (e.key === ' ') { e.target.click(); }
@@ -302,9 +310,11 @@ function Exhibition({ data }) {
         >
           <span className="image-modal-close" onClick={closeModal} aria-label="Close modal">&times;</span>
           <img
-            className="image-modal-content"
+            className={`image-modal-content ${mouseHoverPointerClass}`}
             src={require(`${getImagePathByFileName(data, data.showings[indexOfFocusedImage].fileName)}`)}
             alt={data.showings[indexOfFocusedImage].displayName}
+            onMouseMove={handleMouseMoveCaptureOnImage}
+            onClick={handleModalImageClick}
           />
           <div className="image-modal-caption">{data.showings[indexOfFocusedImage].displayName}</div>
         </div>
