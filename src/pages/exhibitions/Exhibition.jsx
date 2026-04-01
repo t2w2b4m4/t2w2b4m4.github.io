@@ -311,12 +311,11 @@ function Exhibition({ data }) {
           <span className="image-modal-close" onClick={closeModal} aria-label="Close modal">&times;</span>
           <img
             className={`image-modal-content ${mouseHoverPointerClass}`}
-            src={require(`${getImagePathByFileName(data, data.showings[indexOfFocusedImage].fileName)}`)}
+            src={require(`${getImagePathByFileName(data, data.showings[indexOfFocusedImage].fileName, data.meta.specialRendering)}`)}
             alt={data.showings[indexOfFocusedImage].displayName}
             onMouseMove={handleMouseMoveCaptureOnImage}
             onClick={handleModalImageClick}
           />
-          <div className="image-modal-caption">{data.showings[indexOfFocusedImage].displayName}</div>
         </div>
       )}
     </div>

@@ -8,10 +8,12 @@ import precarious from './precarious';
 import geometric from './geometric';
 import curatedWorks from './curatedWorks';
 import onDisplay from './on-display';
+import contemplative from './contemplative';
 
 export default [
   onDisplay,
   curatedWorks,
+  contemplative,
   vol3,
   vol0,
   // archived works

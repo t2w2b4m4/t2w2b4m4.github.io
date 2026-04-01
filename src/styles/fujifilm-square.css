@@ -28,8 +28,8 @@
 }
 
 .fujifilm-photo {
-  max-width: calc(60.75mm - 1px);
-  max-height: calc(60.75mm - 1px);
+  max-width: calc(61mm - 1px - 1.5px);
+  max-height: calc(61mm - 1px - 1.5px);
   object-fit: contain;
   border: 0.5px solid rgba(200, 200, 200, 0.2);
   /* box-shadow: 0px 0px 12px rgb(138, 46, 46); */

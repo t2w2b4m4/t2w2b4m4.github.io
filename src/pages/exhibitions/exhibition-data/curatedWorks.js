@@ -125,7 +125,7 @@ const showings = [
     fileName: 'early-morning-in-late-october.jpg',
     displayName: '',
     description: '',
-    date: 'October 22nd, 2015',
+    date: 'October 22, 2015',
   },
   {
     fileName: 'red-hook-red.jpg',
