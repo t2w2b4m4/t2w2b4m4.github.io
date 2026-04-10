@@ -1731,15 +1731,39 @@ const showings = [
   },
   {
     fileName: 'lucid-dream-1.jpg',
-    displayName: '',
+    displayName: 'Lucid Dream',
     description: '',
     date: '',
   },
   {
     fileName: 'lucid-dream-2.jpg',
-    displayName: '',
+    displayName: 'Lucid Dream',
     description: '',
     date: '',
+  },
+  {
+    fileName: 'lucid-dream-3.jpg',
+    displayName: 'Lucid Dream ', // '3',
+    description: '',
+    date: '', // 'March 21, 2024',
+  },
+  {
+    fileName: 'lucid-dream-5.jpg',
+    displayName: 'Lucid Dream ', // '5',
+    description: '',
+    date: '', // 'May 7, 2024',
+  },
+  {
+    fileName: 'lucid-dream-8.jpg',
+    displayName: 'Lucid Dream ', // '8',
+    description: '',
+    date: '', // 'May 26, 2025',
+  },
+  {
+    fileName: 'lucid-dream-9.jpg',
+    displayName: 'Lucid Dream ', // '9',
+    description: '',
+    date: '', // 'May 27, 2025',
   },
   {
     fileName: 'luck-2.jpg',

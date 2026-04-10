@@ -21,13 +21,13 @@ const onDisplay = {
       fileName: 'angel-island-1.jpg',
       name: '',
       description: '',
-      date: 'May 28th, 2025',
+      date: 'May 28, 2025',
     },
     {
       fileName: 'angel-island-2.jpg',
       name: '',
       description: '',
-      date: 'May 28th, 2025',
+      date: 'May 28, 2025',
     },
   ],
 };

@@ -9,14 +9,16 @@ import geometric from './geometric';
 import curatedWorks from './curatedWorks';
 import onDisplay from './on-display';
 import contemplative from './contemplative';
+import lucidDream from './lucid-dream';
 
 export default [
   onDisplay,
-  curatedWorks,
   contemplative,
+  lucidDream,
   vol3,
   vol0,
-  // archived works
+  curatedWorks,
+  // archived works (filtered and funneled into the archives page in Exhibitions.jsx)
   vol1,
   vol2,
   bkSky,

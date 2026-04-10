@@ -41,7 +41,7 @@ const contemplative = {
     detailedDescription: '',
     imageFolderName: 'curated-works',
     progressStatus: ProgressStatus.IN_PROGRESS,
-    numberOfImages: showings.length,
+    // numberOfImages: showings.length,
     status: '',
     releaseStatus: '',
     releaseDate: '',
