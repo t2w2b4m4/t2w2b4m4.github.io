@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3ca5112f.css",
-    "main.js": "/static/js/main.0c30884b.js",
+    "main.js": "/static/js/main.0729e19e.js",
     "static/media/087-rooms-by-the-sea.jpg": "/static/media/087-rooms-by-the-sea.bc04b45860f8a1d8c023.jpg",
     "static/media/080-a-song-for-you-1.jpg": "/static/media/080-a-song-for-you-1.dca609543c90e561629b.jpg",
     "static/media/finale.jpg": "/static/media/finale.e0f86de6c069852a1413.jpg",
@@ -84,12 +84,14 @@
     "static/media/garden-of-memory-3.jpg": "/static/media/garden-of-memory-3.092226d5628725f5ed5f.jpg",
     "static/media/jack-purcell.jpg": "/static/media/jack-purcell.94fda9f8fdd1f60ec5d6.jpg",
     "static/media/spring-in-prospect-park.jpg": "/static/media/spring-in-prospect-park.c072a02dcbcbf8c21dbd.jpg",
+    "static/media/lucid-dream-3.jpg": "/static/media/lucid-dream-3.54fed275230cb6286fa1.jpg",
     "static/media/element-rust.jpg": "/static/media/element-rust.30af5b1984fc31fc2e72.jpg",
     "static/media/vans-jcrew.jpg": "/static/media/vans-jcrew.695f387c1b94a6795047.jpg",
     "static/media/garden-of-memory.jpg": "/static/media/garden-of-memory.2b9773af666222b648cb.jpg",
     "static/media/foreign.jpg": "/static/media/foreign.8e711a80b3d792a6f167.jpg",
     "static/media/lisa-wip.jpg": "/static/media/lisa-wip.b6880c283079ea3808de.jpg",
     "static/media/glitch.jpg": "/static/media/glitch.39d790bf70d010651e2a.jpg",
+    "static/media/lucid-dream-5.jpg": "/static/media/lucid-dream-5.b6f53f7a07fdeeddf04d.jpg",
     "static/media/autumn-2.jpg": "/static/media/autumn-2.1f067f47722ee0f7b69a.jpg",
     "static/media/painting-study-1.jpg": "/static/media/painting-study-1.7cb5fc1b4ee240fd03ae.jpg",
     "static/media/descending-glance.jpg": "/static/media/descending-glance.869b56ee8f53386829a5.jpg",
@@ -198,6 +200,7 @@
     "static/media/warm-flowers.jpg": "/static/media/warm-flowers.3ce64704409cf3fe64b5.jpg",
     "static/media/field-closed.jpg": "/static/media/field-closed.a3a8281a6ce5b8e24c6e.jpg",
     "static/media/blue-2.jpg": "/static/media/blue-2.faa148ff0f8189bd9f9a.jpg",
+    "static/media/lucid-dream-8.jpg": "/static/media/lucid-dream-8.0798d0c96bfa833ee36f.jpg",
     "static/media/pampered.jpg": "/static/media/pampered.90491bb458200393e470.jpg",
     "static/media/private-property.jpg": "/static/media/private-property.f7120248e10d24c30485.jpg",
     "static/media/stranded-3.jpg": "/static/media/stranded-3.d79f904cf60f1bfe5254.jpg",
@@ -243,6 +246,7 @@
     "static/media/city-bird.jpg": "/static/media/city-bird.926206fa580b2571b778.jpg",
     "static/media/be-on-the-look-out.jpg": "/static/media/be-on-the-look-out.c1c906f5e700fa3d9cbc.jpg",
     "static/media/boyi-chess-game.jpg": "/static/media/boyi-chess-game.efdd6ffaee882bf26856.jpg",
+    "static/media/lucid-dream-9.jpg": "/static/media/lucid-dream-9.20ec4e565831ff003a4f.jpg",
     "static/media/reflection-study-001.jpg": "/static/media/reflection-study-001.fa1aaf660681b295afd1.jpg",
     "static/media/recharge.jpg": "/static/media/recharge.95744385de3c1b3a4641.jpg",
     "static/media/preyed.jpg": "/static/media/preyed.590aa0275581e7315a0a.jpg",
@@ -376,6 +380,6 @@
   },
   "entrypoints": [
     "static/css/main.3ca5112f.css",
-    "static/js/main.0c30884b.js"
+    "static/js/main.0729e19e.js"
   ]
 }
