@@ -132,16 +132,14 @@ function ImageBorder() {
     const isIOS = typeof navigator !== 'undefined' && (/iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1));
 
     // Helper to safely convert canvas to Blob
-    const getCanvasBlob = () => {
-      return new Promise((resolve) => {
-        try {
-          canvas.toBlob((blob) => resolve(blob), 'image/jpeg', quality);
-        } catch (e) {
-          console.error('Canvas is likely tainted by cross-origin resources:', e);
-          resolve(null);
-        }
-      });
-    };
+    const getCanvasBlob = () => new Promise((resolve) => {
+      try {
+        canvas.toBlob((blob) => resolve(blob), 'image/jpeg', quality);
+      } catch (e) {
+        console.error('Canvas is likely tainted by cross-origin resources:', e);
+        resolve(null);
+      }
+    });
 
     const blob = await getCanvasBlob();
     if (!blob) {
