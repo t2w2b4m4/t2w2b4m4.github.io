@@ -122,30 +122,53 @@ function ImageBorder() {
   };
 
   const handleSave = (fractionOfSizeToSave = 1) => () => {
-    // Get the canvas and context
     const canvas = canvasRef.current;
-
-    let actualFractionOfSizeToSave = 1;
-    // Get the image data as a data URI
-    if (fractionOfSizeToSave <= 1 && fractionOfSizeToSave >= 0) {
-      actualFractionOfSizeToSave = fractionOfSizeToSave;
+    if (!canvas) {
+      return;
     }
-    const blobURL = canvas.toDataURL('image/jpeg', actualFractionOfSizeToSave);
 
-    // Create a blob URL
-    // const blobURL = URL.createObjectURL(dataURI);
+    const quality = fractionOfSizeToSave >= 0 && fractionOfSizeToSave <= 1 ? fractionOfSizeToSave : 1;
+    const isIOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    const canUseDownload = typeof document !== 'undefined' && 'download' in document.createElement('a');
+    const fileName = 'image.jpg';
 
-    // Create a link element
-    const link = document.createElement('a');
+    const openDataURL = (dataURL) => {
+      const newWindow = window.open(dataURL, '_blank');
+      if (!newWindow) {
+        window.location.href = dataURL;
+      }
+    };
 
-    // Set the href attribute of the link to the blob URL
-    link.href = blobURL;
+    const triggerDownload = (href) => {
+      const link = document.createElement('a');
+      link.href = href;
+      link.download = fileName;
+      link.rel = 'noopener noreferrer';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
 
-    // Set the download attribute of the link to a file name
-    link.download = 'image.jpg';
+    if (isIOS || !canUseDownload) {
+      const dataURL = canvas.toDataURL('image/jpeg', quality);
+      openDataURL(dataURL);
+      return;
+    }
 
-    // Click the link to download the image
-    link.click();
+    if (canvas.toBlob) {
+      canvas.toBlob((blob) => {
+        if (!blob) {
+          return;
+        }
+        const blobURL = URL.createObjectURL(blob);
+        triggerDownload(blobURL);
+        setTimeout(() => URL.revokeObjectURL(blobURL), 1000);
+      }, 'image/jpeg', quality);
+      return;
+    }
+
+    const dataURL = canvas.toDataURL('image/jpeg', quality);
+    triggerDownload(dataURL);
   };
 
   const handleToggleUseCustomBorderRatio = (e) => {
