@@ -129,15 +129,7 @@ function ImageBorder() {
 
     const quality = fractionOfSizeToSave >= 0 && fractionOfSizeToSave <= 1 ? fractionOfSizeToSave : 1;
     const isIOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    const canUseDownload = typeof document !== 'undefined' && 'download' in document.createElement('a');
     const fileName = 'image.jpg';
-
-    const openDataURL = (dataURL) => {
-      const newWindow = window.open(dataURL, '_blank');
-      if (!newWindow) {
-        window.location.href = dataURL;
-      }
-    };
 
     const triggerDownload = (href) => {
       const link = document.createElement('a');
@@ -149,12 +141,16 @@ function ImageBorder() {
       document.body.removeChild(link);
     };
 
-    if (isIOS || !canUseDownload) {
+    // 1. iOS: Must use synchronous toDataURL. 
+    // If we use async toBlob here, iOS Safari revokes the user-click permission and fails silently.
+    if (isIOS) {
       const dataURL = canvas.toDataURL('image/jpeg', quality);
-      openDataURL(dataURL);
+      triggerDownload(dataURL);
       return;
     }
 
+    // 2. Desktop/Android: Prefer toBlob because it prevents UI freezing on large canvases.
+    // These browsers handle asynchronous click events for downloads perfectly fine.
     if (canvas.toBlob) {
       canvas.toBlob((blob) => {
         if (!blob) {
@@ -167,6 +163,7 @@ function ImageBorder() {
       return;
     }
 
+    // 3. Absolute Fallback
     const dataURL = canvas.toDataURL('image/jpeg', quality);
     triggerDownload(dataURL);
   };
