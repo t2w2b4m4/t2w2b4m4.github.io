@@ -121,51 +121,71 @@ function ImageBorder() {
     reader.readAsDataURL(file);
   };
 
-  const handleSave = (fractionOfSizeToSave = 1) => () => {
+  const handleSave = (fractionOfSizeToSave = 1) => async () => {
     const canvas = canvasRef.current;
-    if (!canvas) {
-      return;
-    }
+    if (!canvas) return;
 
     const quality = fractionOfSizeToSave >= 0 && fractionOfSizeToSave <= 1 ? fractionOfSizeToSave : 1;
-    const isIOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     const fileName = 'image.jpg';
 
-    const triggerDownload = (href) => {
-      const link = document.createElement('a');
-      link.href = href;
-      link.download = fileName;
-      link.rel = 'noopener noreferrer';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+    // 1. Accurate iOS & iPadOS detection (iPadOS reports as "Macintosh" with touch points)
+    const isIOS = typeof navigator !== 'undefined' && (
+      /iPhone|iPod/.test(navigator.userAgent) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+    );
+
+    // Helper to safely convert canvas to Blob
+    const getCanvasBlob = () => {
+      return new Promise((resolve) => {
+        try {
+          canvas.toBlob((blob) => resolve(blob), 'image/jpeg', quality);
+        } catch (e) {
+          console.error("Canvas is likely tainted by cross-origin resources:", e);
+          resolve(null);
+        }
+      });
     };
 
-    // 1. iOS: Must use synchronous toDataURL. 
-    // If we use async toBlob here, iOS Safari revokes the user-click permission and fails silently.
+    const blob = await getCanvasBlob();
+    if (!blob) {
+      alert("Could not export image. Check if canvas images meet CORS rules.");
+      return;
+    }
+
+    // 2. iOS / iPadOS Path: Web Share API
+    // Triggers the iOS system sheet -> "Save to Photos" / "Save to Files"
     if (isIOS) {
-      const dataURL = canvas.toDataURL('image/jpeg', quality);
-      triggerDownload(dataURL);
-      return;
-    }
-
-    // 2. Desktop/Android: Prefer toBlob because it prevents UI freezing on large canvases.
-    // These browsers handle asynchronous click events for downloads perfectly fine.
-    if (canvas.toBlob) {
-      canvas.toBlob((blob) => {
-        if (!blob) {
-          return;
+      const file = new File([blob], fileName, { type: 'image/jpeg' });
+      
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        try {
+          await navigator.share({
+            files: [file],
+            title: 'Save Image',
+          });
+          return; // Successfully presented share sheet
+        } catch (err) {
+          if (err.name === 'AbortError') return; // User closed share sheet intentionally
         }
-        const blobURL = URL.createObjectURL(blob);
-        triggerDownload(blobURL);
-        setTimeout(() => URL.revokeObjectURL(blobURL), 1000);
-      }, 'image/jpeg', quality);
+      }
+
+      // iOS Fallback: Open image blob directly so user can long-press "Save to Photos"
+      const blobURL = URL.createObjectURL(blob);
+      window.location.href = blobURL;
       return;
     }
 
-    // 3. Absolute Fallback
-    const dataURL = canvas.toDataURL('image/jpeg', quality);
-    triggerDownload(dataURL);
+    // 3. Desktop / Android Path: standard invisible <a> click
+    const blobURL = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = blobURL;
+    link.download = fileName;
+    link.rel = 'noopener noreferrer';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    setTimeout(() => URL.revokeObjectURL(blobURL), 2000);
   };
 
   const handleToggleUseCustomBorderRatio = (e) => {
