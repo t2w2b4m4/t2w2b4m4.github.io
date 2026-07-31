@@ -129,10 +129,7 @@ function ImageBorder() {
     const fileName = 'image.jpg';
 
     // 1. Accurate iOS & iPadOS detection (iPadOS reports as "Macintosh" with touch points)
-    const isIOS = typeof navigator !== 'undefined' && (
-      /iPhone|iPod/.test(navigator.userAgent) ||
-      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
-    );
+    const isIOS = typeof navigator !== 'undefined' && (/iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1));
 
     // Helper to safely convert canvas to Blob
     const getCanvasBlob = () => {
@@ -140,7 +137,7 @@ function ImageBorder() {
         try {
           canvas.toBlob((blob) => resolve(blob), 'image/jpeg', quality);
         } catch (e) {
-          console.error("Canvas is likely tainted by cross-origin resources:", e);
+          console.error('Canvas is likely tainted by cross-origin resources:', e);
           resolve(null);
         }
       });
@@ -148,7 +145,7 @@ function ImageBorder() {
 
     const blob = await getCanvasBlob();
     if (!blob) {
-      alert("Could not export image. Check if canvas images meet CORS rules.");
+      alert('Could not export image. Check if canvas images meet CORS rules.');
       return;
     }
 
@@ -156,7 +153,7 @@ function ImageBorder() {
     // Triggers the iOS system sheet -> "Save to Photos" / "Save to Files"
     if (isIOS) {
       const file = new File([blob], fileName, { type: 'image/jpeg' });
-      
+
       if (navigator.canShare && navigator.canShare({ files: [file] })) {
         try {
           await navigator.share({
